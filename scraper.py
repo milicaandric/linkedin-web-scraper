@@ -50,10 +50,7 @@ for profile in profiles:
         schools = ', '.join(sel.xpath('//*[contains(@class, "pv-entity__school-name")]/text()').extract())
         location = sel.xpath('//*[@class="t-16 t-black t-normal inline-block"]/text()').extract_first().strip()
         ln_url = driver.current_url
-        """
-        you can add another logic in case parsing is failed, ie because no job title is found
-        because the linkedin user isn't add it
-        """
+        
     except:
         print('failed')
 
